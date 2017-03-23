@@ -1,0 +1,8 @@
+context:
+  links:
+    - text: "Instagram"
+      url: "https://instagram.com/jennettik/"
+    - text: "Pinterest"
+      url: "https://www.pinterest.com/jennettik/"
+    - text: "LinkedIn"
+      url: "https://www.linkedin.com/in/jenniferfalconburg"

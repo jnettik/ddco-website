@@ -1,0 +1,12 @@
+* html {
+  font-size: 100% * $base-font-size / 16px;
+}
+
+html {
+  font-size: $base-font-size;
+  font-family: $ff-body;
+}
+
+body {
+  color: $clr-text;
+}

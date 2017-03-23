@@ -1,0 +1,11 @@
+<nav class="skills">
+  <ul class="skills__group">
+    {% for skill in skills %}
+    <li
+      class="skills__skill skills_skill--{{skill.machine_name}}"
+      data-skill="{{skill.machine_name}}">
+      {{skill.text}}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

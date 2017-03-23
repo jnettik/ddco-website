@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Custom font family declarations.
+ */
+
+@font-face {
+  font-family: "Trend Slab One";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/trend/trendslabone.eot");
+  src: url("../fonts/trend/trendslabone.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/trend/trendslabone.woff2") format("woff2"),
+       url("../fonts/trend/trendslabone.woff") format("woff"),
+       url("../fonts/trend/trendslabone.ttf") format("truetype"),
+       url("../fonts/trend/trendslabone.svg#trend_slabone") format("svg");
+}
+
+@font-face {
+  font-family: "Brandon Printed Inline";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/brandon/brandon-printed-inline.eot");
+  src: url("../fonts/brandon/brandon-printed-inline.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/brandon/brandon-printed-inline.woff2") format("woff2"),
+       url("../fonts/brandon/brandon-printed-inline.woff") format("woff"),
+       url("../fonts/brandon/brandon-printed-inline.ttf") format("truetype"),
+       url("../fonts/brandon/brandon-printed-inline.svg#brandon_printedinline") format("svg");
+}
