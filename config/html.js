@@ -22,7 +22,7 @@ config.permalinks = {
 };
 
 config.twig = {
-  directory: '../templates',
+  directory: '../presenters',
   cache: false
 };
 
