@@ -7,3 +7,5 @@ This is a multi-use directory for both static and compiled assets that will be n
 * Image files that are generated via tools like ImageMagick.
 * CSS files generated from Sass.
 * Bundled JS files.
+
+Both the styleguide and the static site will look here for assets on compilation. 
