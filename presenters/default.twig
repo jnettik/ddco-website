@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title }} | {{ metadata.sitename }}</title>
+    {% block metadata %}
+    <meta name="description" content="{{ metadata.description }}">
+    {% endblock %}
+
     {% block stylesheets %}
     <link rel="stylesheet" href="/css/styles.css">
     {% endblock %}
@@ -14,6 +18,10 @@
     {% block content %}
       {{ contents }}
     {% endblock %}
+
+    {% include '../styleguide/patterns/01-components/primary-nav/primary-nav.twig' with {
+      "links": metadata.main_menu
+    } %}
 
     {% block js_body %}
     {% endblock %}

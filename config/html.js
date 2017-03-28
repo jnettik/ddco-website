@@ -9,6 +9,14 @@ config.metadata = {};
 config.metadata.sitename = "Dearly Design Co.";
 config.metadata.description = "[description]";
 
+config.metadata.extra = {};
+config.metadata.extra.files = {
+  menus: `${__dirname}/../metadata/menus.yml`
+};
+config.metadata.extra.config = {
+  isExternalSrc: true
+};
+
 config.ignore = [
   'README.*'
 ];

@@ -1,0 +1,19 @@
+<nav class="primary-nav">
+  <ul class="primary-nav--links">
+    {% for link in links %}
+    <li class="primary-nav--item">
+      <a href="{{ link.url }}" class="primary-nav--link">{{ link.text }}</a>
+
+      {% if link.children %}
+      <ul class="primary-nav--dropdown">
+        {% for link in link.children %}
+        <li class="primary-nav--item">
+          <a href="{{ link.url }}" class="primary-nav--link">{{ link.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

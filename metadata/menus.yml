@@ -1,0 +1,10 @@
+main_menu:
+  links:
+    - text: "About"
+      url: "#"
+    - text: "Services"
+      url: "#"
+    - text: "Shop"
+      url: "#"
+    - text: "Contact"
+      url: "#"

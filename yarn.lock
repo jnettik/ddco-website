@@ -2578,6 +2578,12 @@ metalsmith-metadata@^0.0.4:
   dependencies:
     js-yaml "^3.2.7"
 
+metalsmith-metadata@jembijoux/metalsmith-metadata#ext-data-sources:
+  version "0.0.1"
+  resolved "https://codeload.github.com/jembijoux/metalsmith-metadata/tar.gz/5f8f1018fa61b3e3af02cc1ff92dbaae87687919"
+  dependencies:
+    js-yaml "^3.2.7"
+
 metalsmith-permalinks@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/metalsmith-permalinks/-/metalsmith-permalinks-0.5.0.tgz#0fec5b1f0687828c198d33b5d479cc1cec4b1a1f"
