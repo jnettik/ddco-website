@@ -9,6 +9,10 @@ config.metadata = {};
 config.metadata.sitename = "Dearly Design Co.";
 config.metadata.description = "[description]";
 
+config.ignore = [
+  'README.*'
+];
+
 config.collections = {
   posts: {
     pattern: 'posts/**/*.md',

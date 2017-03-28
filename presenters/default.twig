@@ -2,9 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome</title>
+    <title>{{ title }} | {{ metadata.sitename }}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" href="/css/styles.css">
+    {% endblock %}
+
+    {% block js_head %}
+    {% endblock %}
   </head>
   <body>
-    <h1>Hello</h1>
+    {% block content %}
+      {{ contents }}
+    {% endblock %}
+
+    {% block js_body %}
+    {% endblock %}
   </body>
 </html>

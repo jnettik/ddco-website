@@ -8,6 +8,7 @@ const paths = require('../config').paths;
 
 const gulp = require('gulp');
 const Metalsmith = require('metalsmith');
+const ignore = require('metalsmith-ignore');
 const assets = require('metalsmith-assets');
 const markdown = require('metalsmith-markdown');
 const permalinks = require('metalsmith-permalinks');
@@ -19,6 +20,7 @@ gulp.task('html', ['clean:html'], () => {
     .metadata(config.metadata)
     .source(paths.html.source)
     .destination(paths.html.build)
+    .use(ignore(config.ignore))
     .use(collections(config.collections))
     .use(markdown())
     .use(permalinks(config.permalinks))
