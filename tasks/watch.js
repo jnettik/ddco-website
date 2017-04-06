@@ -12,6 +12,6 @@ gulp.task('watch', () => {
   sequence('css','html','styleguide','browser-sync', () => {
     watch(config.html.paths, () => { sequence('html'); });
     watch(config.styleguide.paths, () => { sequence('styleguide'); });
-    watch(config.css.paths, () => { sequence('css','styleguide','html') });
+    watch(config.css.paths, () => { sequence('css','html','styleguide') });
   });
 });

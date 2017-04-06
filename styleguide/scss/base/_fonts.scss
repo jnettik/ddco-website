@@ -3,26 +3,71 @@
  * Custom font family declarations.
  */
 
+/**
+ * Sweet Sans Font.
+ */
+@font-face {
+  font-family: "Sweet Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/sweetsanspro/sweetsanspro-light.woff2") format("woff2"),
+       url("../fonts/sweetsanspro/sweetsanspro-light.woff") format("woff");
+}
+@font-face {
+  font-family: "Sweet Sans Pro";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/sweetsanspro/sweetsanspro-bold.woff2") format("woff2"),
+       url("../fonts/sweetsanspro/sweetsanspro-bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Sweet Sans Pro";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/sweetsanspro/sweetsanspro-bold.woff2") format("woff2"),
+       url("../fonts/sweetsanspro/sweetsanspro-bold.woff") format("woff");
+}
+
+/**
+ * Trend Slab One Font.
+ */
 @font-face {
   font-family: "Trend Slab One";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/trend/trendslabone.eot");
-  src: url("../fonts/trend/trendslabone.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/trend/trendslabone.woff2") format("woff2"),
-       url("../fonts/trend/trendslabone.woff") format("woff"),
-       url("../fonts/trend/trendslabone.ttf") format("truetype"),
-       url("../fonts/trend/trendslabone.svg#trend_slabone") format("svg");
+  src: url("../fonts/trendslabone/trendslabone.woff2") format("woff2"),
+       url("../fonts/trendslabone/trendslabone.woff") format("woff");
 }
 
+/**
+ * Mathilde Font.
+ */
 @font-face {
-  font-family: "Brandon Printed Inline";
+  font-family: "Mathilde";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/brandon/brandon-printed-inline.eot");
-  src: url("../fonts/brandon/brandon-printed-inline.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/brandon/brandon-printed-inline.woff2") format("woff2"),
-       url("../fonts/brandon/brandon-printed-inline.woff") format("woff"),
-       url("../fonts/brandon/brandon-printed-inline.ttf") format("truetype"),
-       url("../fonts/brandon/brandon-printed-inline.svg#brandon_printedinline") format("svg");
+  src: url("../fonts/mathilde/mathilde.woff2") format("woff2"),
+       url("../fonts/mathilde/mathilde.woff") format("woff");
+}
+
+/**
+ * Crystal Sky Caps Font.
+ */
+@font-face {
+  font-family: "Crystal Sky Caps";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/crystalskycaps/crystalskycaps.woff2") format("woff2"),
+       url("../fonts/crystalskycaps/crystalskycaps.woff") format("woff");
+}
+
+/**
+ * Amber Light Font.
+ */
+@font-face {
+  font-family: "Amber Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/amberlight/amberlight.woff2") format("woff2"),
+       url("../fonts/amberlight/amberlight.woff") format("woff");
 }
