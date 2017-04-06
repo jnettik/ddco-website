@@ -9,7 +9,10 @@ config.base = `${__dirname}/..`;
 
 // HTML watch patterns.
 config.html = {};
-config.html.paths = `${config.base}/content/**/*.md`;
+config.html.paths = [
+  `${config.base}/content/**/*.md`,
+  `${config.base}/presenters/**/*.twig`
+];
 
 // CSS watch patterns.
 config.css = {};

@@ -8,7 +8,7 @@
     {% endblock %}
 
     {% block stylesheets %}
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     {% endblock %}
 
     {% block js_head %}
@@ -18,6 +18,19 @@
     {% block content %}
       {{ contents }}
     {% endblock %}
+
+    {% include '../styleguide/patterns/01-components/cta-band/cta-band.twig' with {
+      'title': 'Showers, Soirées, and Celebrations...',
+      'subtitle': 'We\'ve got you',
+      'button': {
+        'text': 'Go Shopping',
+        'href': '#'
+      }
+    } %}
+
+    {% include '../styleguide/patterns/01-components/section-slogan/section-slogan.twig' with {
+      'text': 'Love is all you need. Love, and a really great cocktail.'
+    } %}
 
     {% include '../styleguide/patterns/01-components/primary-nav/primary-nav.twig' with metadata.menus.main_menu %}
 

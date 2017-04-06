@@ -5,13 +5,11 @@
 
 const config = require('../config').css;
 const paths = require('../config').paths.css;
-const bsInstanceName = require('../config').browser_sync.instanceName;
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cssnext = require('postcss-cssnext');
-const browserSync = require('browser-sync').get(bsInstanceName);
 
 const plugins = [
   cssnext(config.cssnext)
@@ -26,6 +24,4 @@ gulp.task('css', ['clean:css'], () => {
     .pipe(sass(config.options).on('error', sass.logError))
     .pipe(postcss(plugins))
     .pipe(gulp.dest(paths.build));
-
-  browserSync.reload()
 });
