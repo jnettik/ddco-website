@@ -6,7 +6,7 @@
 // Typefaces.
 //----------------------------------------------------------------------------
 $ff-mono:  monospace;
-$ff-sans:  Open Sans, Helvetica, Arial, sans-serif;
+$ff-sans:  Sweet Sans Pro, Helvetica, Arial, sans-serif;
 $ff-serif: Trend Slab One, Georgia, serif;
 $ff-grunge: Brandon Printed Inline, $ff-sans;
 
@@ -22,7 +22,7 @@ $ff-display: $ff-heading;
 $fs-2xs:     12px;
 $fs-xs:      13px;
 $fs-s:       14px;
-$fs-m:       16px;
+$fs-m:       18px;
 $fs-l:       22px;
 $fs-xl:      24px;
 $fs-2xl:     28px;
@@ -55,7 +55,7 @@ $indent-amount: 3em !default;
 
 // Vertical rhythm.
 //----------------------------------------------------------------------------
-$base-font-size:    $fs-s;       // Font-size of your body copy.
+$base-font-size:    $fs-m;       // Font-size of your body copy.
 $base-line-height:  6px;         // Setting the base-line-height half.
                                  // the height of the desired body copy.
                                  // line-height helps prevent sparse.
