@@ -1,5 +1,13 @@
 {% embed './default.twig' %}
   {% block content %}
+    <section class="masthead">
+      {%
+        include '../styleguide/patterns/01-components/page-title/page-title.twig' with {
+          'text': 'Let\'s have <strong>fun together</strong>'
+        }
+      %}
+    </section>
+
     {{ parent() }}
   {% endblock %}
 {% endembed %}

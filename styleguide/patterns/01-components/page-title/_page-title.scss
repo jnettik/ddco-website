@@ -1,0 +1,13 @@
+.page-title {
+  background-color: $clr-heading;
+  color: #fff;
+  display: inline-block;
+  font-family: $ff-page-title;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  > strong {
+    display: block;
+  }
+}
