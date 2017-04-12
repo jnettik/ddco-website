@@ -18,15 +18,12 @@ config.metadata.extra.config = {
 };
 
 config.ignore = [
-  'README.*'
+  'README.*',
+  'profiles/*.md'
 ];
 
 config.collections = {
-  posts: {
-    pattern: 'posts/**/*.md',
-    sortBy: 'date',
-    reverse: true
-  }
+  profiles: 'profiles/*.md',
 }
 
 config.permalinks = {
