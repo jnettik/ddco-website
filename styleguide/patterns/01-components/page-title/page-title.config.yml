@@ -1,2 +1,3 @@
 context:
-  text: "Let's have <strong>fun together</strong>"
+  text: "Let's have"
+  emphasized: "fun together"
