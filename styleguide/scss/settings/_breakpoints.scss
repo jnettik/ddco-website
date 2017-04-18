@@ -5,6 +5,14 @@
 
 @include breakpoint-set("to ems", true);
 
-$bp-full: 860px;
-$bp-large: 580px;
-$bp-medium: 420px;
+// Breakpoint mapping
+$breakpoints: (
+  none:     0,
+  tiny:     400px,
+  default:  500px,
+  small:    600px,
+  medium:   768px,
+  large:    992px,
+  x-large:  1200px,
+  w-max: 2200px
+);
