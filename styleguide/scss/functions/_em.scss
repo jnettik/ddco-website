@@ -1,0 +1,3 @@
+@function em($target, $container: $base-font-size) {
+  @return ($target / $container) * 1em;
+}
