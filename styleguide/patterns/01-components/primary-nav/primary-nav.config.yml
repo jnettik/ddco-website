@@ -9,6 +9,9 @@ context:
             url: "#"
           - text: "Service 2"
             url: "#"
+      - text: "Dearly Design Co."
+        url: "#"
+        logo: true
       - text: "Shop"
         url: "#"
       - text: "Contact"

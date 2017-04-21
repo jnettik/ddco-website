@@ -4,12 +4,13 @@
   > .primary-nav {
     left: 0;
     position: absolute;
-    top: rem(60px);
+    top: rem(50px);
     width: 100%;
   }
 }
 
 .primary-nav__links {
+  align-items: center;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -49,5 +50,17 @@
       left: 0;
       width: 100%;
     }
+  }
+}
+
+.primary-nav__logo {
+  &, > img {
+    display: block;
+  }
+
+  > img {
+    height: auto;
+    transform: translateY(rem(-10px));
+    width: rem(200px);
   }
 }

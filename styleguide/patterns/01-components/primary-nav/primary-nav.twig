@@ -2,7 +2,11 @@
   <ul class="primary-nav__links">
     {% for link in links %}
     <li class="primary-nav__item">
-      <a href="{{ link.url }}" class="primary-nav__link">{{ link.text }}</a>
+      {% if link.logo is defined and link.logo %}
+        <a href="{{ link.url }}" class="primary-nav__logo"><img src="/assets/images/logo.svg" alt="{{ link.text }}"></a>
+      {% else %}
+        <a href="{{ link.url }}" class="primary-nav__link">{{ link.text }}</a>
+      {% endif %}
 
       {% if link.children %}
       <ul class="primary-nav__dropdown">

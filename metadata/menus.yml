@@ -4,6 +4,9 @@ main_menu:
       url: "#"
     - text: "Services"
       url: "#"
+    - text: "Dearly Design Co."
+      url: "/"
+      logo: true
     - text: "Shop"
       url: "#"
     - text: "Contact"
