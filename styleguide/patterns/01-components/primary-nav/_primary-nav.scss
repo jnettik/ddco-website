@@ -12,10 +12,33 @@
 .primary-nav__links {
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+
+  @include bp(medium) {
+    justify-content: space-around;
+  }
+}
+
+.primary-nav__item {
+  @include bp(none medium) {
+    &:first-child,
+    &:last-child {
+      top: 0;
+      position: absolute;
+    }
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
 }
 
 .primary-nav__link {
@@ -51,6 +74,10 @@
       width: 100%;
     }
   }
+
+  @include bp(none medium) {
+    @include fs(tiny);
+  }
 }
 
 .primary-nav__logo {
@@ -61,6 +88,13 @@
   > img {
     height: auto;
     transform: translateY(rem(-10px));
-    width: rem(200px);
+    width: rem(150px);
+  }
+
+  @include bp(medium) {
+    > img {
+      transform: translateY(rem(-10px));
+      width: rem(200px);
+    }
   }
 }
