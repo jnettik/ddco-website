@@ -1,0 +1,17 @@
+{% set classes = ['l-columns'] %}
+
+{% if constrained %}
+  {% set classes = classes|merge(['l-constrained']) %}
+{% endif %}
+
+<section class="{{ classes|join(' ') }}" data-column-count="{{ count|default('2') }}">
+  <div class="l-columns__item">
+  {% block first %}
+  {% endblock %}
+  </div>
+
+  <div class="l-columns__item">
+  {% block second %}
+  {% endblock %}
+  </div>
+</section>

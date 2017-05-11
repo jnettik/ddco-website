@@ -13,6 +13,7 @@
 @import "../patterns/00-base/00-headings/headings";
 
 // Import component partials.
+@import "../patterns/01-components/c-billboard/c-billboard";
 @import "../patterns/01-components/page-title/page-title";
 @import "../patterns/01-components/section-title/section-title";
 @import "../patterns/01-components/section-slogan/section-slogan";
@@ -21,3 +22,5 @@
 
 // Import layout partials.
 @import "../patterns/02-layouts/l-masthead/l-masthead";
+@import "../patterns/02-layouts/l-constrained/l-constrained";
+@import "../patterns/02-layouts/l-2/l-2";

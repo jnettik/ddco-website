@@ -1,10 +1,9 @@
 // Layout
 //----------------------------------------------------------------------------
-// Grid.
-// @include add-grid(12);
-// @include add-gutter(1/2);
 
-// Width.
-$w-gutter: 34px;
-$w-gutter-half: $w-gutter / 2;
-$w-full: 826px + $w-gutter;
+// gutters.
+$g-gutter: 34px;
+$g-gutter-half: $w-gutter / 2;
+
+// widths.
+$w-full: 1200px + $g-gutter-half;

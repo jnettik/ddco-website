@@ -1,4 +1,5 @@
-.page-title {
+.c-page-title {
+  @include fs(page-title);
   display: inline-block;
   font-family: $ff-page-title;
   font-weight: 400;

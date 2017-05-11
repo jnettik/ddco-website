@@ -9,6 +9,21 @@
       %}
     </section>
 
-    {{ parent() }}
+    {% embed '../styleguide/patterns/02-layouts/l-columns/l-columns.twig' with {
+      count: 2,
+      constrained: true
+    } only %}
+      {% block first %}
+      {% endblock %}
+
+      {% block second %}
+      {%
+        include '../styleguide/patterns/01-components/title--fancy/title--fancy.twig' with {
+        'text': title,
+        }
+      %}
+      {{ parent() }}
+      {% endblock %}
+    {% endembed %}
   {% endblock %}
 {% endembed %}

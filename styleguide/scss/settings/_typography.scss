@@ -10,6 +10,7 @@ $ff-mono:  monospace;
 $ff-sans:  Sweet Sans Pro, Helvetica, Arial, sans-serif;
 $ff-serif: Trend Slab One, Georgia, serif;
 $ff-grunge: Brandon Printed Inline, $ff-sans;
+$ff-script: Amber Light, script;
 
 //
 // Semantic fonts.
@@ -28,6 +29,7 @@ $base-line-height:  1.5;
 
 $font-sizes: (
   "none": (
+    "page-title": 54px,
     "micro": 12px,
     "tiny": 14px,
     "label": 16px,
