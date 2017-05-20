@@ -1,11 +1,15 @@
-{% set components = '../styleguide/patterns/01-components' %}
-
 {% embed './default.twig' %}
   {% block content %}
     {# Place the page header. #}
     {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'center' } %}
       {% block content %}
         {% include '../styleguide/patterns/01-components/c-title-ribbon/c-title-ribbon.twig' with { text_upper: 'Let&rsquo;s have', text_lower: 'fun together' } %}
+      {% endblock %}
+    {% endembed %}
+
+    {# Place Homepage intro. #}
+    {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
+      {% block content %}
       {% endblock %}
     {% endembed %}
   {% endblock %}
