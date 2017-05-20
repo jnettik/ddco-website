@@ -1,4 +1,4 @@
-<section class="c-billboard c-billboard--{{ alignment }}">
+<section class="c-billboard c-billboard--{{ alignment|default('center') }}">
   {% block content %}
   {% endblock %}
 </section>
