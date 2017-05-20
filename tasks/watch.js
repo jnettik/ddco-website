@@ -11,7 +11,7 @@ const sequence = require('run-sequence');
 gulp.task('watch', () => {
   sequence('css','html','browser-sync', () => {
     watch(config.html.paths, () => { sequence('html'); });
-    watch(config.styleguide.paths, () => { sequence('styleguide'); });
+    watch(config.styleguide.paths, () => { sequence('html'); });
     watch(config.css.paths, () => { sequence('css','html') });
   });
 });

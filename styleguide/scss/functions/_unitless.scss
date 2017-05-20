@@ -1,0 +1,6 @@
+/// Remove the unit of a length
+/// @param {Number} $value - Number to remove unit from
+/// @return {Number} - Unitless number
+@function unitless($value) {
+  @return $value / ($value * 0 + 1);
+}

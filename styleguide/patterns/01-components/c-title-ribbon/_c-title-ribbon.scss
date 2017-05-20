@@ -1,0 +1,22 @@
+$fs-max: 72px;
+$fs-min: 32px;
+$w-max: 1200px;
+$w-min: 500px;
+$clr-ribbon: $pink;
+
+.c-title-ribbon {
+  color: #fff;
+  font-family: $ff-sans;
+  font-size: calc(#{$fs-min} + (#{unitless($fs-max - $fs-min)}) * ((100vw - #{$w-min}) / (#{unitless($w-max - $w-min)})));
+  font-weight: $fw-regular;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  > span,
+  > strong {
+    background-color: $clr-ribbon;
+    line-height: 1.5;
+    padding: em(8px, $fs-max) em(14px, $fs-max) 0;
+  }
+}

@@ -19,7 +19,7 @@ const plugins = [
  * CSS task that checks if we're setting up a watcher or a one off compile.
  */
 gulp.task('css', ['clean:css'], () => {
-  gulp.src(paths.source)
+  return gulp.src(paths.source)
     // Compile Sass files into CSS.
     .pipe(sass(config.options).on('error', sass.logError))
     .pipe(postcss(plugins))

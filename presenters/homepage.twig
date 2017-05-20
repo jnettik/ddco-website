@@ -5,7 +5,7 @@
     {# Place the page header. #}
     {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'center' } %}
       {% block content %}
-        Here's some copy.
+        {% include '../styleguide/patterns/01-components/c-title-ribbon/c-title-ribbon.twig' with { text_upper: 'Let&rsquo;s have', text_lower: 'fun together' } %}
       {% endblock %}
     {% endembed %}
   {% endblock %}
