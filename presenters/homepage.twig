@@ -10,6 +10,14 @@
     {# Place Homepage intro. #}
     {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
       {% block content %}
+        {% embed '../styleguide/patterns/02-layouts/l-columns/l-columns.twig' with { count: 2, ratio: 'equal', element: 'section' } %}
+          {% block region_1 %}
+            Region 1
+          {% endblock %}
+          {% block region_2 %}
+            Region 2
+          {% endblock %}
+        {% endembed %}
       {% endblock %}
     {% endembed %}
   {% endblock %}

@@ -1,0 +1,5 @@
+title: "Columned Layout"
+context:
+  count: 2
+  ratio: 'equal'
+  element: 'div'
