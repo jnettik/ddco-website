@@ -1,0 +1,16 @@
+.l-grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.l-grid-list__item {
+  margin: 0;
+  padding: 0;
+
+  .l-grid-list--col-2 > & {
+    width: 50%;
+  }
+}

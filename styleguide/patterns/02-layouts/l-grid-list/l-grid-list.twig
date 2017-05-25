@@ -1,0 +1,13 @@
+{% set base_classes = ['l-grid-list', 'l-grid-list--col-' ~ columns|default(2)] %}
+{# Merge in any passed classes on top of our layout classes. #}
+{% if classes %}
+  {% set classes = classes|merge(base_classes) %}
+{% else %}
+  {% set classes = base_classes %}
+{% endif %}
+
+<ul class="{{ classes|join(' ') }}">
+  {% for item in items %}
+  <li class="l-grid-list__item">{{ item|raw }}</li>
+  {% endfor %}
+</ul>
