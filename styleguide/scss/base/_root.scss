@@ -3,8 +3,9 @@
 }
 
 html {
-  font-size: $base-font-size;
   font-family: $ff-body;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 body {
