@@ -10,9 +10,9 @@
     {# Place Homepage intro. #}
     {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
       {% block content %}
-        {% embed '../styleguide/patterns/02-layouts/l-columns/l-columns.twig' with { count: 2, ratio: 'equal', element: 'section' } %}
+        {% embed '../styleguide/patterns/02-layouts/l-columns/l-columns.twig' with { count: 2, ratio: 'equal', element: 'section', flow: 'reverse', classes: ['u-pad'] } %}
           {% block region_1 %}
-            Region 1
+            {% include '../styleguide/patterns/01-components/c-text-block/c-text-block.twig' with { title_fancy: 'Hey!', title: 'We&rsquo;re Dearly, and we like to party.', content: 'Dearly Design Co. is a husband and wife team inspired by cocktails and confetti and fueled by coffee (and fur-baby cuddles). We provide stationery, paper goods and branding for modern brides, creative events and beautiful businesses.' } %}
           {% endblock %}
           {% block region_2 %}
             Region 2

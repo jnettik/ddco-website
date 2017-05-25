@@ -1,4 +1,14 @@
-{% set classes = ['l-columns', 'l-columns--' ~ count|default(2) ~ '-' ~ ratio|default('equal')] %}
+{% set base_classes = ['l-columns', 'l-columns--' ~ ratio|default('equal')] %}
+{# Merge in any passed classes on top of our layout classes. #}
+{% if classes %}
+  {% set classes = classes|merge(base_classes) %}
+{% else %}
+  {% set classes = base_classes %}
+{% endif %}
+{# Merge in flow options. #}
+{% if flow %}
+  {% set classes = classes|merge(['l-columns--' ~ flow]) %}
+{% endif %}
 
 <{{ element|default('div') }} class="{{ classes|join(' ') }}">
   {% for region in 1..count %}

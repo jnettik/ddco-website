@@ -15,11 +15,17 @@
 // Import component partials.
 @import "../patterns/01-components/c-billboard/c-billboard";
 @import "../patterns/01-components/c-title-ribbon/c-title-ribbon";
+@import "../patterns/01-components/c-text-block/c-text-block";
+
 @import "../patterns/01-components/section-title/section-title";
 @import "../patterns/01-components/section-slogan/section-slogan";
 @import "../patterns/01-components/button/button";
 @import "../patterns/01-components/primary-nav/primary-nav";
 
 // Import layout partials.
+@import "../patterns/02-layouts/l-columns/l-columns";
 @import "../patterns/02-layouts/l-masthead/l-masthead";
 @import "../patterns/02-layouts/l-constrained/l-constrained";
+
+// Import utility partials.
+@import "../patterns/04-utilities/u-pad/u-pad";

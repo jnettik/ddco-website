@@ -1,0 +1,11 @@
+<div class="c-text-block">
+  <header class="c-text-block__header">
+    {% if title_fancy %}
+    <h2 class="c-text-block__fancy-title">{{ title_fancy }}</h2>
+    {% endif %}
+
+    <h2 class="c-text-block__title">{{ title }}</h2>
+
+    {{ content }}
+  </header>
+</div>

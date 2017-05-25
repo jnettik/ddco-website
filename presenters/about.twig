@@ -1,4 +1,10 @@
 {% embed './default.twig' %}
   {% block content %}
+    {# Place the page header. #}
+    {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'center' } %}
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-title-ribbon/c-title-ribbon.twig' with { text_upper: 'We believe in', text_lower: 'celebrating you' } %}
+      {% endblock %}
+    {% endembed %}
   {% endblock %}
 {% endembed %}

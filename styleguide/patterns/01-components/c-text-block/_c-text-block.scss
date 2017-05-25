@@ -1,0 +1,21 @@
+$fs-fancy: 120px;
+$fs-title: 32px;
+
+.c-text-block__title {
+  color: $teal;
+  font-size: rem($fs-title);
+  margin: 0;
+}
+
+.c-text-block__fancy-title {
+  color: $pink;
+  font-family: $ff-script;
+  font-size: rem($fs-fancy);
+  line-height: 1;
+  margin: 0;
+  text-transform: lowercase;
+
+  // This font is dumb, so add some spacing tricks to fix the line height issue.
+  margin-bottom: em(-34px, $fs-fancy);
+  padding-top: em(34px, $fs-fancy);
+}
