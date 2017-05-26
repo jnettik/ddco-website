@@ -1,0 +1,34 @@
+$font-size: 28px;
+
+.c-cta-figure {
+  border: 3px solid transparent;
+  position: relative;
+
+  &__caption {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__link {
+    background-color: #fff;
+    color: $orange;
+    display: inline-block;
+    font-size: rem($font-size);
+    padding: em(3px, $font-size) em(20px, $font-size) 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      background-color .25s,
+      color .25s;
+
+    &:hover,
+    &:focus {
+      background-color: $orange;
+      color: #fff;
+    }
+  }
+}

@@ -15,13 +15,21 @@
             {% include '../styleguide/patterns/01-components/c-text-block/c-text-block.twig' with { title_fancy: 'Hey!', title: 'We&rsquo;re Dearly, and we like to party.', content: '<p>Dearly Design Co. is a husband and wife team inspired by cocktails and confetti and fueled by coffee (and fur-baby cuddles). We provide stationery, paper goods and branding for modern brides, creative events and beautiful businesses.</p>' } only %}
           {% endblock %}
           {% block region_2 %}
+            {% set figure %}
+              {% include '../styleguide/patterns/01-components/c-cta-figure/c-cta-figure.twig' with {
+                img_src: 'http://lorempixel.com/300/300/people/',
+                img_alt: 'Alt text here',
+                link_text: 'Meet Us',
+                link_href: 'http://www.google.com'
+              } only %}
+            {% endset %}
             {% include '../styleguide/patterns/02-layouts/l-grid-list/l-grid-list.twig' with {
               columns: 2,
               items: [
-                'item 1',
-                'item 2',
-                'item 3',
-                'item 4'
+                figure,
+                figure,
+                figure,
+                figure
               ]
             } only %}
           {% endblock %}

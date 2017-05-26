@@ -1,0 +1,9 @@
+<figure class="c-cta-figure">
+  <img src="{{ img_src }}" alt="{{ img_alt }}" class="c-cta-figure__media">
+
+  {% if link_text and link_href %}
+    <figcaption class="c-cta-figure__caption">
+      <a href="{{ link_href }}" class="c-cta-figure__link">{{ link_text }}</a>
+    </figcaption>
+  {% endif %}
+</figure>

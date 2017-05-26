@@ -12,11 +12,13 @@
 // Import base partials.
 @import "../patterns/00-base/00-headings/headings";
 @import "../patterns/00-base/02-text/text";
+@import "../patterns/00-base/03-media/media";
 
 // Import component partials.
 @import "../patterns/01-components/c-billboard/c-billboard";
 @import "../patterns/01-components/c-title-ribbon/c-title-ribbon";
 @import "../patterns/01-components/c-text-block/c-text-block";
+@import "../patterns/01-components/c-cta-figure/c-cta-figure";
 
 @import "../patterns/01-components/section-title/section-title";
 @import "../patterns/01-components/section-slogan/section-slogan";
