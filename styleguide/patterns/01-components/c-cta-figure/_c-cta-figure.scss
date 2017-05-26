@@ -1,4 +1,4 @@
-$font-size: 28px;
+$font-size: 24px;
 
 .c-cta-figure {
   border: 3px solid transparent;
@@ -18,7 +18,7 @@ $font-size: 28px;
     color: $orange;
     display: inline-block;
     font-size: rem($font-size);
-    padding: em(3px, $font-size) em(20px, $font-size) 0;
+    padding: em(8px, $font-size) em(24px, $font-size) em(4px, $font-size);
     text-decoration: none;
     text-transform: uppercase;
     transition:
