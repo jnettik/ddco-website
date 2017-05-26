@@ -1,11 +1,14 @@
 .l-columns {
-  align-items: center;
-  display: flex;
   margin-left: rem(0 - $g-gutter-half);
   margin-right: rem(0 - $g-gutter-half);
 
-  &--reverse {
-    flex-flow: row-reverse;
+  @include breakpoint(1000px) {
+    align-items: center;
+    display: flex;
+
+    &--reverse {
+      flex-flow: row-reverse;
+    }
   }
 }
 
@@ -13,7 +16,9 @@
   padding-left: rem($g-gutter-half);
   padding-right: rem($g-gutter-half);
 
-  .l-columns--equal & {
-    flex: 1;
+  @include breakpoint(1000px) {
+    .l-columns--equal & {
+      flex: 1;
+    }
   }
 }

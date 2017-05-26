@@ -4,8 +4,12 @@
 
 html {
   font-family: $ff-body;
-  font-size: $base-font-size;
+  font-size: 100% * 16px / 16px;
   line-height: $base-line-height;
+
+  @include breakpoint(650px) {
+    font-size: 100% * $base-font-size / 16px;
+  }
 }
 
 body {

@@ -4,6 +4,10 @@ $font-size: 24px;
   border: 3px solid transparent;
   position: relative;
 
+  &__media {
+    width: 100%;
+  }
+
   &__caption {
     position: absolute;
     text-align: center;
@@ -18,6 +22,7 @@ $font-size: 24px;
     color: $orange;
     display: inline-block;
     font-size: rem($font-size);
+    line-height: 1;
     padding: em(8px, $font-size) em(24px, $font-size) em(4px, $font-size);
     text-decoration: none;
     text-transform: uppercase;

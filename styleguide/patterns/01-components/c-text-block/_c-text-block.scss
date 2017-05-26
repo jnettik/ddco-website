@@ -3,16 +3,20 @@ $fs-title: 26px;
 
 .c-text-block__title {
   color: $teal;
-  font-size: rem($fs-title);
+  font-size: rem(24px);
   margin: 0 0 .5em;
   position: relative;
   z-index: 2;
+
+  @include breakpoint(650px) {
+    font-size: rem($fs-title);
+  }
 }
 
 .c-text-block__fancy-title {
   color: $pink;
   font-family: $ff-script;
-  font-size: rem($fs-fancy);
+  font-size: rem($fs-fancy * .666666);
   line-height: 1;
   margin: 0;
   padding-left: em(20px, $fs-fancy);
@@ -25,4 +29,12 @@ $fs-title: 26px;
   // This font is dumb, so add some spacing tricks to fix the line height issue.
   margin-bottom: em(-50px, $fs-fancy);
   padding-top: em(50px, $fs-fancy);
+
+  @include breakpoint(max-width 649px) {
+    text-align: center;
+  }
+
+  @include breakpoint(650px) {
+    font-size: rem($fs-fancy);
+  }
 }
