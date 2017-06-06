@@ -1,0 +1,29 @@
+<nav class="c-main-nav">
+  <ul class="c-main-nav__links">
+    {% for link in links %}
+    <li class="c-main-nav__item">
+      {% set link_classes = ['c-main-nav__link'] %}
+
+      {% if current_path|slice(0, link.url|length) == link.url %}
+        {% set link_classes = link_classes|merge('c-main-nav__active-trail') %}
+      {% endif %}
+
+      {% if current_path|slice(0, link.url|length) == link.url %}
+        {% set link_classes = link_classes|merge('c-main-nav__active') %}
+      {% endif %}
+
+      <a href="{{ link.url }}" class="{{ link_classes|join(' ') }}">{{ link.content|raw }}</a>
+
+      {% if link.children %}
+      <ul class="c-main-nav__dropdown">
+        {% for link in link.children %}
+        <li class="c-main-nav__item">
+          <a href="{{ link.url }}" class="c-main-nav__link">{{ link.content|raw }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

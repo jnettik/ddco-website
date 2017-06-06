@@ -1,4 +1,6 @@
-<{{ element|default('div') }} class="l-constrained">
-  {% block content %}
+{% set classes = ['l-constrained']|merge(classes|default([])) %}
+
+<{{ element|default('div') }} class="{{ classes|join(' ') }}">
+  {% block region %}
   {% endblock %}
 </{{ element|default('div') }}>

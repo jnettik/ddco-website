@@ -9,7 +9,7 @@
 
     {# Place Homepage intro. #}
     {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
-      {% block content %}
+      {% block region %}
         {% embed '../styleguide/patterns/02-layouts/l-columns/l-columns.twig' with { count: 2, ratio: 'equal', element: 'section', flow: 'reverse', classes: ['u-pad'] } %}
           {% block region_1 %}
             {% include '../styleguide/patterns/01-components/c-text-block/c-text-block.twig' with { title_fancy: 'Hey!', title: 'We&rsquo;re Dearly, and we like to party.', content: '<p>Dearly Design Co. is a husband and wife team inspired by cocktails and confetti and fueled by coffee (and fur-baby cuddles). We provide stationery, paper goods and branding for modern brides, creative events and beautiful businesses.</p>' } only %}

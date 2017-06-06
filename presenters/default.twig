@@ -18,7 +18,14 @@
     {% endblock %}
   </head>
 
-  <body class="primary-nav__wrapper">
+  <body>
+    <div class="l-constrained c-main-nav__wrapper">
+      {% include '../styleguide/patterns/01-components/c-main-nav/c-main-nav.twig' with {
+        links: metadata.menus.main_menu.links,
+        current_path: path
+      } only %}
+    </div>
+
     {% block content %}
       {{ contents }}
     {% endblock %}

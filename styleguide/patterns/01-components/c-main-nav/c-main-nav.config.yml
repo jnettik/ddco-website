@@ -1,11 +1,18 @@
-main_menu:
+title: Main Navigation
+context:
   links:
     - content: "About"
       url: "#"
+      active: true
     - content: "Services"
       url: "#"
+      children:
+        - content: "Service 1"
+          url: "#"
+        - content: "Service 2"
+          url: "#"
     - content: "Dearly Design Co."
-      url: "/"
+      url: "#"
     - content: "Shop"
       url: "#"
     - content: "Contact"
