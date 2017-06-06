@@ -1,0 +1,24 @@
+$fs-button: 20px;
+
+.button {
+  align-self: center;
+  appearance: none;
+  background-color: $orange;
+  color: #fff;
+  display: inline-flex;
+  font-family: $ff-sans;
+  font-size: rem($fs-button);
+  justify-content: center;
+  padding:
+    em(10px, $fs-button)
+    em(20px, $fs-button)
+    em(4px, $fs-button);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .25s;
+
+  &:focus,
+  &:hover {
+    background-color: darken($orange, 5%);
+  }
+}

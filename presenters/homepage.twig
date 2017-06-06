@@ -36,5 +36,10 @@
         {% endembed %}
       {% endblock %}
     {% endembed %}
+
+    {% include '../styleguide/patterns/01-components/c-button/c-button.twig' with {
+      content: 'See More',
+      href: 'http://www.google.com'
+    } %}
   {% endblock %}
 {% endembed %}
