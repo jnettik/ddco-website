@@ -37,9 +37,22 @@
       {% endblock %}
     {% endembed %}
 
-    {% include '../styleguide/patterns/01-components/c-button/c-button.twig' with {
-      content: 'See More',
-      href: 'http://www.google.com'
+    {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+      title: "Bold Design for the Modern Bride",
+      items: [
+        'Save the dates',
+        'Invitation suites',
+        'Programs &amp; Menus',
+        'Day of paper goods',
+        'Favors &amp Gifts',
+        'Thank you cards',
+        'RSVP websites',
+        'Professional printing'
+      ],
+      button: {
+        content: 'See More',
+        href: 'http://www.google.com'
+      }
     } %}
   {% endblock %}
 {% endembed %}

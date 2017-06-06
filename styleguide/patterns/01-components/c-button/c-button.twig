@@ -3,7 +3,7 @@
   button: 'button'
 } %}
 
-{% set class = ['button']|merge(classes|default([])) %}
+{% set class = ['c-button']|merge(classes|default([])) %}
 
 <{{ elems[type|default('anchor')] }} href="{{ href }}" class="{{ class|join(' ') }}">
   {% block content %}

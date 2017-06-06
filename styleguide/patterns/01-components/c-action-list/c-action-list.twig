@@ -1,0 +1,26 @@
+{% set class = ['c-action-list']|merge(classes|default([])) %}
+
+{% if reverse|default(false) %}
+  {% set class = class|merge(['c-action-list--reverse']) %}
+{% endif %}
+
+<div class="{{ class|join(' ') }}">
+  <h2 class="c-action-list__title">{{ title }}</h2>
+
+  {% if items %}
+  <ul class="c-action-list__items">
+    {% for item in items %}
+    <li class="c-action-list__item">{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if button.content and button.href %}
+  <div class="c-action-list__actions">
+    {% include '../c-button/c-button.twig' with {
+      content: button.content,
+      href: button.href
+    } only %}
+  </div>
+  {% endif %}
+</div>
