@@ -1,0 +1,28 @@
+.l-teaser {
+  background-color: #f6f7f7;
+
+  &__content {
+    padding: rem(30px) percentage(50px / $w-full);
+  }
+
+  @include breakpoint(600px) {
+    display: flex;
+
+    &__thumb {
+      flex: 5;
+    }
+
+    &__content {
+      display: flex;
+      flex: 5;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  @include breakpoint(1000px) {
+    &__content {
+      padding: rem(60px) percentage(100px / $w-full);
+    }
+  }
+}

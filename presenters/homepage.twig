@@ -37,27 +37,33 @@
       {% endblock %}
     {% endembed %}
 
-    {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
-      title: "Bold Design for the Modern Bride",
-      items: [
-        'Save the dates',
-        'Invitation suites',
-        'Programs &amp; Menus',
-        'Day of paper goods',
-        'Favors &amp Gifts',
-        'Thank you cards',
-        'RSVP websites',
-        'Professional printing'
-      ],
-      button: {
-        content: 'See More',
-        href: 'http://www.google.com'
-      }
-    } %}
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="http://www.lorempixel.com/1024/1024" alt="Image">',
+          caption: 'Weddings'
+        } %}
+      {% endblock %}
 
-    {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
-      media: '<img src="http://www.lorempixel.com/1024/1024" alt="Image">',
-      caption: 'Weddings'
-    } %}
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Bold Design for the Modern Bride",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: 'http://www.google.com'
+          }
+        } %}
+      {% endblock %}
+    {% endembed %}
   {% endblock %}
 {% endembed %}

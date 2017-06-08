@@ -2,12 +2,11 @@ $fs-item: 16px;
 
 .c-action-list {
   &__title {
+    line-height: 1.25;
     margin: 0 0 1em;
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
     list-style: none;
     margin: 0 0 2rem;
     padding: 0;
@@ -16,7 +15,6 @@ $fs-item: 16px;
   &__item {
     font-size: rem($fs-item);
     padding: 0;
-    width: 50%;
   }
 
   &--reverse {
@@ -24,6 +22,17 @@ $fs-item: 16px;
     .c-action-list__actions,
     .c-action-list__item {
       text-align: right;
+    }
+  }
+
+  @include breakpoint(350px) {
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 50%;
     }
   }
 }
