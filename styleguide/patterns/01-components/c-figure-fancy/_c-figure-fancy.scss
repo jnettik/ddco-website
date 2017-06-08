@@ -1,0 +1,12 @@
+.c-figure-fancy {
+  overflow: hidden;
+  position: relative;
+
+  &__media {
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+title: Fancy Figure
+context:
+  media: '<img src="http://www.lorempixel.com/1024/1024" alt="Image">'
+  caption: Weddings
