@@ -1,0 +1,13 @@
+<section class="c-cta-banner">
+  <h2 class="c-cta-banner__title">{{ title }}</h2>
+  <p class="c-cta-banner__subtitle">{{ subtitle }}</p>
+
+  {% if button.text and button.href %}
+  <div class="c-cta-banner__actions">
+    {% include '../c-button/c-button.twig' with {
+      content: button.text,
+      href: button.href
+    } only %}
+  </div>
+  {% endif %}
+</section>

@@ -1,0 +1,28 @@
+.c-cta-banner {
+  padding: 3.5rem 1rem;
+  text-align: center;
+
+  &__title,
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__title {
+    color: $teal;
+    font-family: $ff-sans;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    color: $pink;
+    font-family: $ff-script;
+    font-size: rem(80px);
+    line-height: 1;
+    margin-bottom: em(-16px, 80px);
+    padding-top: em(18px, 80px);
+  }
+
+  &__actions {
+    margin-top: 2rem;
+  }
+}
