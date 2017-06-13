@@ -1,4 +1,16 @@
-<section class="l-teaser l-constrained--pad">
+{% set base_classes = ['l-teaser', 'l-constrained--pad'] %}
+{# Merge in any passed classes on top of our layout classes. #}
+{% if classes %}
+  {% set classes = classes|merge(base_classes) %}
+{% else %}
+  {% set classes = base_classes %}
+{% endif %}
+{# Merge in flow options. #}
+{% if flow %}
+  {% set classes = classes|merge(['l-teaser--' ~ flow]) %}
+{% endif %}
+
+<section class="{{ classes|join(' ') }}">
   <div class="l-teaser__thumb">
     {% block thumb %}
     {% endblock %}

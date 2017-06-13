@@ -1,7 +1,8 @@
 {% set class = ['c-action-list']|merge(classes|default([])) %}
 
-{% if reverse|default(false) %}
-  {% set class = class|merge(['c-action-list--reverse']) %}
+{# Merge in flow options. #}
+{% if flow %}
+  {% set class = class|merge(['c-action-list--' ~ flow]) %}
 {% endif %}
 
 <div class="{{ class|join(' ') }}">

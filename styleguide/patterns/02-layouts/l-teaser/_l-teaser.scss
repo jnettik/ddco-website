@@ -18,6 +18,11 @@
       flex-direction: column;
       justify-content: center;
     }
+
+    &--reverse {
+      background-color: #fff;
+      flex-direction: row-reverse;
+    }
   }
 
   @include breakpoint(1000px) {

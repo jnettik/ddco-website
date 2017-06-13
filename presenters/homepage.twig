@@ -65,5 +65,64 @@
         } %}
       {% endblock %}
     {% endembed %}
+
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' with { flow: 'reverse' } %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="http://www.lorempixel.com/1024/1024" alt="Image">',
+          caption: 'Weddings'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Creativity for inspired events",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: 'http://www.google.com'
+          },
+          flow: 'reverse'
+        } %}
+      {% endblock %}
+    {% endembed %}
+
+        {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="http://www.lorempixel.com/1024/1024" alt="Image">',
+          caption: 'Weddings'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Stylish Branding for Beautiful Businesses",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: 'http://www.google.com'
+          }
+        } %}
+      {% endblock %}
+    {% endembed %}
   {% endblock %}
 {% endembed %}
