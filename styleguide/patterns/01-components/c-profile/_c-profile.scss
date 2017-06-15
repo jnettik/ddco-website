@@ -1,0 +1,12 @@
+.c-profile__social {
+  color: $pink;
+  display: inline-block;
+  font-family: $ff-heading;
+  font-size: rem(14px);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

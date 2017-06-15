@@ -23,6 +23,30 @@
       {% endblock %}
     {% endembed %}
 
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' with { flow: 'reverse' } %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="/assets/images/jennifer.jpg" alt="Jennifer Nettik Photo">'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-profile/c-profile--jennifer.twig' %}
+      {% endblock %}
+    {% endembed %}
+
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="/assets/images/james.jpg" alt="James Nettik Photo">'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-profile/c-profile--james.twig' %}
+      {% endblock %}
+    {% endembed %}
+
     {% include '../styleguide/patterns/01-components/c-cta-banner/c-cta-banner.twig' with {
       title: "Showers, Soirées, and Celebrations...",
       subtitle: "we've got you",
