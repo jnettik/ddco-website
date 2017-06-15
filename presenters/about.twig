@@ -6,5 +6,34 @@
         {% include '../styleguide/patterns/01-components/c-title-ribbon/c-title-ribbon.twig' with { text_upper: 'We believe in', text_lower: 'celebrating you' } %}
       {% endblock %}
     {% endembed %}
+
+    {# Place About intro. #}
+    {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
+      {% block region %}
+        {% embed '../styleguide/patterns/02-layouts/l-columns/l-columns.twig' with { count: 2, ratio: 'equal', element: 'section', classes: ['u-pad'] } %}
+          {% block region_1 %}
+            {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+              media: '<img src="/assets/images/about-intro.jpg" alt="">'
+            } %}
+          {% endblock %}
+          {% block region_2 %}
+            {% include '../styleguide/patterns/01-components/c-text-block/c-text-block.twig' with { title: 'Born from a love of the actually authentic', content: '<p>We believe that everything in life should be celebrated, and that each celebration should be uniquely you. Our style is bold, playful and a little bit offbeat. Our couples are traditional but with a modern, personal flair.</p><p>Started in 2012 with a serious belief that nobody\'s personality is actually defined by mason jars and burlap. Your wedding day is reflection of who you as a couple and a celebration of the special things you love about each other. (Fun fact: our own wedding, was cat themed. No, really.)</p><p>Dearly Design Co. is a stationery and design studio in Denver, Colorado and has been a part of over 1,000 events worldwide.</p>' } only %}
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+    {% endembed %}
+
+    {% include '../styleguide/patterns/01-components/c-cta-banner/c-cta-banner.twig' with {
+      title: "Showers, Soirées, and Celebrations...",
+      subtitle: "we've got you",
+      button: {
+        href: "http://www.google.com",
+        text: "Go Shopping"
+      }
+    } %}
+
+    {% include '../styleguide/patterns/01-components/c-slogan/c-slogan.twig' with {
+        text: "Love is all you need. Love, and a really great cocktail.",
+    } %}
   {% endblock %}
 {% endembed %}

@@ -41,33 +41,41 @@
   color: #fff;
   display: block;
   font-weight: bold;
-  padding: em(10px);
+  padding: em(10px) em(16px);
   position: relative;
   text-align: center;
   text-transform: uppercase;
+
+  > img {
+    display: block;
+    margin: 0 rem(20px);
+    width: rem(200px);
+  }
 
   &, &:hover {
     text-decoration: none;
   }
 
-  &:after {
-    background-color: #fff;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    transition:
-      left .2s,
-      width .2s;
-    width: 0;
-  }
-
-  &:hover {
+  &:not(.c-main-nav__link-logo) {
     &:after {
-      left: 0;
-      width: 100%;
+      background-color: #fff;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      transition:
+        left .2s,
+        width .2s;
+      width: 0;
+    }
+
+    &:hover {
+      &:after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
 

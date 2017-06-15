@@ -4,6 +4,10 @@
     <li class="c-main-nav__item">
       {% set link_classes = ['c-main-nav__link'] %}
 
+      {% if link.logo %}
+        {% set link_classes = link_classes|merge(['c-main-nav__link-logo']) %}
+      {% endif %}
+
       {% if current_path|slice(0, link.url|length) == link.url %}
         {% set link_classes = link_classes|merge('c-main-nav__active-trail') %}
       {% endif %}

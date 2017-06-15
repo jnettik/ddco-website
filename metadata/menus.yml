@@ -1,11 +1,12 @@
 main_menu:
   links:
     - content: "About"
-      url: "#"
+      url: "/about"
     - content: "Services"
       url: "#"
-    - content: "Dearly Design Co."
+    - content: "<img src=\"/assets/images/logo.svg\" alt=\"Dearly Design Co.\">"
       url: "/"
+      logo: true
     - content: "Shop"
       url: "#"
     - content: "Contact"

@@ -24,10 +24,11 @@ config.ignore = [
 
 config.collections = {
   profiles: 'profiles/*.md',
+  blog: 'blog/*.md'
 }
 
 config.permalinks = {
-  pattern: 'blog/:title'
+  pattern: ':permalink'
 };
 
 config.twig = {

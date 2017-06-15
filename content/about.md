@@ -1,7 +1,7 @@
 ---
 title: About Us
 view: about.twig
-permalink: false
+permalink: about
 ---
 
 ## Born from a love of the actually authentic
