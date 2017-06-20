@@ -1,3 +1,80 @@
+.c-profile__survey {
+  counter-reset: survey_questions;
+  margin: 0 0 2em;
+  padding-top: 1em;
+
+  &-question {
+    margin-bottom: .25rem;
+    padding-left: 1.25rem;
+    position: relative;
+
+    &:after {
+      content: counter(survey_questions) ".";
+      counter-increment: survey_questions;
+      font-weight: $fw-bold;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &-answer {
+    margin: 0 0 1.5rem 1.25rem;
+
+    &[data-survey-type="text"] {
+      border-bottom: 1px solid $clr-text;
+
+      [data-profile="jennettik"] & {
+        font-family: "Mathilde", $ff-sans;
+        font-size: rem(40px);
+        line-height: 0;
+        padding: em(30px, 40px) 0 em(5px, 40px);
+      }
+
+      [data-profile="jnettik"] & {
+        font-family: "Crystal Sky Caps", $ff-sans;
+        font-size: rem(28px);
+      }
+    }
+  }
+
+  &-options {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: upper-alpha;
+    margin: 0 0 0 1.25rem;
+    padding: 0;
+  }
+
+  &-option {
+    width: 50%;
+
+    &.selected {
+      position: relative;
+
+      &:after {
+        content: "O";
+        position: absolute;
+
+        [data-profile="jennettik"] & {
+          font-family: "Mathilde", $ff-sans;
+          font-size: rem(50px);
+          left: em(-30px, 50px);
+          top: em(-6px, 50px);
+        }
+
+        [data-profile="jnettik"] & {
+          content: "0";
+          font-family: "Crystal Sky Caps", $ff-sans;
+          font-size: rem(50px);
+          left: em(-30px, 50px);
+          top: em(-6px, 50px);
+        }
+      }
+    }
+  }
+}
+
 .c-profile__social {
   color: $pink;
   display: inline-block;
