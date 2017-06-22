@@ -25,10 +25,23 @@
       border-bottom: 1px solid $clr-text;
 
       [data-profile="jennettik"] & {
+        border-bottom: none;
         font-family: "Mathilde", $ff-sans;
         font-size: rem(40px);
-        line-height: 0;
-        padding: em(30px, 40px) 0 em(5px, 40px);
+        line-height: .75;
+        margin-bottom: .75rem;
+        padding: em(24px, 40px) 0 0;
+        position: relative;
+
+        &:after {
+          border-bottom: 1px solid $clr-text;
+          bottom: rem(12px);
+          content: '';
+          display: block;
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
       }
 
       [data-profile="jnettik"] & {
@@ -39,8 +52,6 @@
   }
 
   &-options {
-    display: flex;
-    flex-wrap: wrap;
     list-style: upper-alpha;
     margin: 0 0 0 1.25rem;
     padding: 0;
@@ -64,13 +75,31 @@
         }
 
         [data-profile="jnettik"] & {
-          content: "0";
-          font-family: "Crystal Sky Caps", $ff-sans;
-          font-size: rem(50px);
-          left: em(-30px, 50px);
-          top: em(-6px, 50px);
+          border: 1px solid $clr-text;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          height: rem(20px);
+          left: rem(-28px);
+          transform: skew(-10deg);
+          top: rem(2px);
+          width: rem(20px);
         }
       }
+    }
+  }
+
+  @include breakpoint(1000px) {
+    column-count: 2;
+    column-gap: 1em;
+
+    &-item {
+      break-inside: avoid;
+    }
+
+    &-options {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
