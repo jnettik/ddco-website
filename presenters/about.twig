@@ -35,7 +35,7 @@
       {% endblock %}
     {% endembed %}
 
-    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' with { color: 'light' } %}
       {% block thumb %}
         {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
           media: '<img src="/assets/images/james.jpg" alt="James Nettik Photo">'

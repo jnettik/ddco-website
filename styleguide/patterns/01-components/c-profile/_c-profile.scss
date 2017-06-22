@@ -1,3 +1,9 @@
+.c-profile {
+  @include breakpoint(1000px) {
+    margin: rem(-30px) rem(-50px);
+  }
+}
+
 .c-profile__survey {
   counter-reset: survey_questions;
   margin: 0 0 2em;

@@ -9,6 +9,9 @@
 {% if flow %}
   {% set classes = classes|merge(['l-teaser--' ~ flow]) %}
 {% endif %}
+{% if color %}
+  {% set classes = classes|merge(['l-teaser--' ~ color]) %}
+{% endif %}
 
 <section class="{{ classes|join(' ') }}">
   <div class="l-teaser__thumb">

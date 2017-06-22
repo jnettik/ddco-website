@@ -19,8 +19,11 @@
       justify-content: center;
     }
 
-    &--reverse {
+    &--light {
       background-color: #fff;
+    }
+
+    &--reverse {
       flex-direction: row-reverse;
     }
   }
