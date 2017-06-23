@@ -23,12 +23,25 @@ config.ignore = [
 ];
 
 config.collections = {
+  blog: {
+    pattern: 'blog/*.md',
+    sortby: 'date'
+  },
   profiles: 'profiles/*.md',
-  blog: 'blog/*.md'
+  services: {
+    pattern: 'services/*.md'
+  }
 }
 
 config.permalinks = {
-  pattern: ':permalink'
+  pattern: ':permalink',
+  linksets: [{
+    match: { collection: 'blog' },
+    pattern: 'blog/:title'
+  }, {
+    match: { collection: 'services' },
+    pattern: 'services/:title'
+  }]
 };
 
 config.twig = {

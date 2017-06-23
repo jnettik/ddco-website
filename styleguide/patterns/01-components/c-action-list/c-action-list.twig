@@ -5,6 +5,16 @@
   {% set class = class|merge(['c-action-list--' ~ flow]) %}
 {% endif %}
 
+{# Merge in flow options. #}
+{% if variant %}
+  {% set class = class|merge(['c-action-list--' ~ variant]) %}
+{% endif %}
+
+{# Merge in flow options. #}
+{% if classes %}
+  {% set class = class|merge(classes) %}
+{% endif %}
+
 <div class="{{ class|join(' ') }}">
   <h2 class="c-action-list__title">{{ title }}</h2>
 

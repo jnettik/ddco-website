@@ -1,0 +1,23 @@
+{% embed './default.twig' %}
+  {% block content %}
+    {# Place the page header. #}
+    {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'right' } %}
+      {% block content %}
+
+      {% endblock %}
+    {% endembed %}
+
+    {% include '../styleguide/patterns/01-components/c-cta-banner/c-cta-banner.twig' with {
+        title: "Showers, Soirées, and Celebrations...",
+        subtitle: "we've got you",
+        button: {
+          href: "http://www.google.com",
+          text: "Go Shopping"
+        }
+    } %}
+
+    {% include '../styleguide/patterns/01-components/c-slogan/c-slogan.twig' with {
+        text: "Love is all you need. Love, and a really great cocktail.",
+    } %}
+  {% endblock %}
+{% endembed %}

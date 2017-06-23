@@ -3,7 +3,7 @@ main_menu:
     - content: "About"
       url: "/about"
     - content: "Services"
-      url: "#"
+      url: "/services"
     - content: "<img src=\"/assets/images/logo.svg\" alt=\"Dearly Design Co.\">"
       url: "/"
       logo: true

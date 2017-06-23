@@ -1,24 +1,47 @@
 $bg-color: $navy;
 
 .c-billboard {
-  align-items: center;
   background-color: $bg-color;
   background-image: url('../images/billboard-bg.jpg');
   background-position: center;
   background-size: cover;
-  display: flex;
   height: 100vh;
   width: 100%;
 
-  &--start {
-    justify-content: flex-start;
-  }
-
-  &--center {
+  &__content {
+    align-items: center;
+    display: flex;
+    height: 100%;
     justify-content: center;
   }
 
-  &--end {
-    justify-content: flex-end;
+  @include breakpoint(750px) {
+    &--start,
+    &--end {
+      .c-billboard__item {
+        flex: .5;
+      }
+    }
+  }
+
+  @include breakpoint(960px) {
+    &--start,
+    &--end {
+      .c-billboard__item {
+        flex: .35;
+      }
+    }
+
+    &--start {
+      .c-billboard__content {
+        justify-content: flex-start;
+      }
+    }
+
+    &--end {
+      .c-billboard__content {
+        justify-content: flex-end;
+      }
+    }
   }
 }

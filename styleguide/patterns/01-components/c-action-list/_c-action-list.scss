@@ -25,6 +25,12 @@ $fs-item: 16px;
     }
   }
 
+  &--light {
+    .c-action-list__items {
+      color: #fff;
+    }
+  }
+
   @include breakpoint(350px) {
     &__items {
       display: flex;
