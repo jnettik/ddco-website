@@ -1,0 +1,47 @@
+.c-instructions {
+  counter-reset: instructions;
+  list-style: none;
+  margin: rem(0 - $g-gutter-half) rem(0 - $g-gutter-half) rem($g-gutter);
+  padding: 0;
+
+  @include breakpoint(500px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-instructions__item {
+  box-sizing: border-box;
+  padding: rem($g-gutter-half);
+  text-align: center;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    align-items: center;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    color: $orange;
+    content: counter(instructions);
+    counter-increment: instructions;
+    display: inline-flex;
+    font-family: $ff-serif;
+    font-size: rem(52px);
+    font-weight: $fw-bold;
+    height: rem(68px);
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    width: rem(68px);
+  }
+
+  @include breakpoint(500px) {
+    width: 50%;
+  }
+
+  @include breakpoint(960px) {
+    width: 25%;
+  }
+}

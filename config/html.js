@@ -23,11 +23,16 @@ config.ignore = [
 ];
 
 config.collections = {
-  blog: {
-    pattern: 'blog/*.md',
+  articles: {
+    pattern: 'articles/*.md',
     sortby: 'date'
   },
-  profiles: 'profiles/*.md',
+  profiles: {
+    pattern: 'profiles/*.md',
+    metadata: {
+      permalink: false
+    }
+  },
   services: {
     pattern: 'services/*.md'
   }
@@ -36,7 +41,7 @@ config.collections = {
 config.permalinks = {
   pattern: ':permalink',
   linksets: [{
-    match: { collection: 'blog' },
+    match: { collection: 'articles' },
     pattern: 'blog/:title'
   }, {
     match: { collection: 'services' },

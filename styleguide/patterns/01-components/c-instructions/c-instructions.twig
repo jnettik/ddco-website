@@ -1,0 +1,9 @@
+<ol class="c-instructions">
+  {% for item in items %}
+  <li class="c-instructions__item">
+    <h3 class="c-instructions__item-title">{{ item.title }}</h3>
+
+    <div class="c-instructions__item-body">{{ item.body }}</div>
+  </li>
+  {% endfor %}
+</ol>

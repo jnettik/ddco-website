@@ -29,6 +29,30 @@
       text: "Our Favs"
     } only %}
 
+    {% include '../styleguide/patterns/01-components/c-section-title/c-section-title.twig' with {
+      text: "How It Works"
+    } only %}
+
+     {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
+      {% block region %}
+        {% include '../styleguide/patterns/01-components/c-instructions/c-instructions.twig' with {
+          items: [{
+            title: "Contact",
+            body: "<p>Send us an email detailing your needs and vision or we'll out our <a href=\"#\">quote request form</a> and we’ll review your ideas and provide a price estimate, timeline and detailed outline of what to expect.</p>"
+          }, {
+            title: "Exploration",
+            body: "<p>Once we’ve collected a signed proposal and the initial deposit, we’re ready to get started. You'll receive initial design concepts, and an allo ed number of revisions to the chosen concept.</p>"
+          }, {
+            title: "Extension",
+            body: "<p>Once your concept has been established, it will be carried over to all of your pieces. You’ll receive digital proofs and an allowed number of revisions to each piece.</p><p><small>Printed proofs available upon request, if timeline allows.</small></p>"
+          }, {
+            title: "Finishing",
+            body: "<p>Once we’ve received approval and final payment, we’ll go to print and your final pieces will arrive in your mailbox soon!</p>"
+          }]
+        } only %}
+      {% endblock %}
+    {% endembed %}
+
     {% include '../styleguide/patterns/01-components/c-cta-banner/c-cta-banner.twig' with {
         title: "Showers, Soirées, and Celebrations...",
         subtitle: "we've got you",
