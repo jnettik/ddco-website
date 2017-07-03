@@ -1,0 +1,31 @@
+.article {
+  padding: 2rem 0;
+}
+
+.article-title {
+  color: $teal;
+  font-size: rem(24px);
+  line-height: 1.25;
+  margin: 0 0 .25em;
+}
+
+.article-metadata {
+  color: $pink;
+  font-size: rem(18px);
+  text-transform: uppercase;
+}
+
+.article-content {
+  display: flex;
+  padding: 2rem 0;
+
+  .main-col {
+    flex: 2;
+    margin-right: rem($g-gutter-half);
+  }
+
+  .side-col {
+    flex: 1;
+    margin-left: rem($g-gutter-half);
+  }
+}

@@ -1,0 +1,10 @@
+<div class="c-credit-list">
+  <h2 class="c-credit-list__title">{{ title|default('Credits') }}</h2>
+
+  <dl class="c-credit-list__items">
+    {% for item in items %}
+      <dt class="c-credit-list__label">{{ item.label }}</dt>
+      <dt class="c-credit-list__item"><a href="{{ item.url }}" class="c-credit-list__link">{{ item.name }}</a></dt>
+    {% endfor %}
+  </dl>
+</div>

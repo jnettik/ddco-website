@@ -28,6 +28,7 @@
 @import "../patterns/01-components/c-section-title/c-section-title";
 @import "../patterns/01-components/c-profile/c-profile";
 @import "../patterns/01-components/c-instructions/c-instructions";
+@import "../patterns/01-components/c-credit-list/c-credit-list";
 
 // Import layout partials.
 @import "../patterns/02-layouts/l-columns/l-columns";
@@ -38,3 +39,6 @@
 
 // Import utility partials.
 @import "../patterns/04-utilities/u-pad/u-pad";
+
+// Needing cleanup
+@import "./articles";

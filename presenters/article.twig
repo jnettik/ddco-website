@@ -5,16 +5,22 @@
 
     {% embed '../styleguide/patterns/02-layouts/l-constrained/l-constrained.twig' %}
       {% block region %}
-      <article class="article">
+        <article class="article">
           <h1 class="article-title">{{ title }}</h1>
           <footer class="article-metadata">{{ category }} | <time datetime="{{ post_date|date('Y-m-dT00:00:00+00:00') }}">{{ post_date|date('F j, Y') }}</time></footer>
 
-          <div class="main-col">
-            {{ contents }}
-          </div>
+          <div class="article-content">
+            <div class="main-col">
+              {{ contents }}
 
-          <aside class="side-col">
-          </aside>
+              {% include '../styleguide/patterns/01-components/c-credit-list/c-credit-list.twig' with {
+                items: credits
+              } only %}
+            </div>
+
+            <aside class="side-col">
+            </aside>
+          </div>
         </article>
       {% endblock %}
     {% endembed %}

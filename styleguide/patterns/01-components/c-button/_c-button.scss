@@ -20,5 +20,6 @@ $fs-button: 20px;
   &:focus,
   &:hover {
     background-color: darken($orange, 5%);
+    text-decoration: none;
   }
 }

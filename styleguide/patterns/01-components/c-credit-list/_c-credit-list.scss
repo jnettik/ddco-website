@@ -1,0 +1,45 @@
+.c-credit-list {
+  padding-top: 1rem;
+}
+
+.c-credit-list__title {
+  font-family: $ff-script;
+  font-size: rem(60px);
+  line-height: 1;
+  margin: 0 0 em(-14px, 60px);
+  padding-top: em(24px, 60px);
+  text-transform: lowercase;
+}
+
+.c-credit-list__items {
+  margin: 0;
+}
+
+.c-credit-list__label,
+.c-credit-list__item {
+  display: inline-flex;
+  font-size: rem(16px);
+}
+
+.c-credit-list__item {
+  &:not(:last-child) {
+    position: relative;
+
+    &:after {
+      color: lighten($clr-text, 33%);
+      content: '|';
+      display: inline-block;
+      margin: 0 rem(4px) 0 rem(6px);
+    }
+  }
+}
+
+.c-credit-list__label {
+  &:after {
+    content: ": ";
+  }
+}
+
+.c-credit-list__link {
+  color: $orange;
+}
