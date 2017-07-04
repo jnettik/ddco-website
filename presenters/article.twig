@@ -39,6 +39,9 @@
             </div>
 
             <aside class="side-col">
+              {% for article in related %}
+                {{ article.title }}
+              {% endfor %}
             </aside>
           </div>
         </article>
