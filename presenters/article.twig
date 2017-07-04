@@ -7,7 +7,7 @@
       {% block region %}
         <article class="article">
           <h1 class="article-title">{{ title }}</h1>
-          <footer class="article-metadata">{{ category }} | <time datetime="{{ post_date|date('Y-m-dT00:00:00+00:00') }}">{{ post_date|date('F j, Y') }}</time></footer>
+          <footer class="article-metadata">{{ category }} | <time datetime="{{ post_date|date('Y-m-dT00:00:00+06:00') }}">{{ post_date|date('F j, Y') }}</time></footer>
 
           <div class="article-content">
             <div class="main-col">
@@ -16,6 +16,26 @@
               {% include '../styleguide/patterns/01-components/c-credit-list/c-credit-list.twig' with {
                 items: credits
               } only %}
+
+              {% include '../styleguide/patterns/01-components/c-profile-teaser/c-profile-teaser.twig' with {
+                profile: author
+              } only %}
+
+              {% if previous or next %}
+                <ul class="c-article-pager">
+                  {% if previous %}
+                    <li class="c-article-pager__item">
+                      <a href="/{{ previous.path }}" class="c-article-pager__link c-article-pager__link-prev">Newer</a>
+                    </li>
+                  {% endif %}
+
+                  {% if next %}
+                    <li class="c-article-pager__item">
+                      <a href="{{ next.path }}" class="c-article-pager__link c-article-pager__link-next">Older</a>
+                    </li>
+                  {% endif %}
+                </ul>
+              {% endif %}
             </div>
 
             <aside class="side-col">

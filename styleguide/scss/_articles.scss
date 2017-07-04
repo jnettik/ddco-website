@@ -16,16 +16,19 @@
 }
 
 .article-content {
-  display: flex;
   padding: 2rem 0;
 
-  .main-col {
-    flex: 2;
-    margin-right: rem($g-gutter-half);
-  }
+  @include breakpoint(800px) {
+    display: flex;
 
-  .side-col {
-    flex: 1;
-    margin-left: rem($g-gutter-half);
+    .main-col {
+      flex: 2;
+      margin-right: rem($g-gutter-half);
+    }
+
+    .side-col {
+      flex: 1;
+      margin-left: rem($g-gutter-half);
+    }
   }
 }

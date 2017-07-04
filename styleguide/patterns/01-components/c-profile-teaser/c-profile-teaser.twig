@@ -1,0 +1,18 @@
+{% set name = profile == 'jennettik' ? 'Jennifer Nettik' : 'James Nettik' %}
+{% set thumbnail = profile ~ '.jpg' %}
+{% if profile == 'jennettik' %}
+  {% set bio = 'Graphic designer by trade, party hostess by accident, and lifelong fan of love stories and anyone who steadfastly marches to the beat of their own drum. Self professed cat lady and sometimes cosplayer.' %}
+{% else %}
+  {% set bio = 'Graphic designer by trade, party hostess by accident, and lifelong fan of love stories and anyone who steadfastly marches to the beat of their own drum. Self professed cat lady and sometimes cosplayer.' %}
+{% endif %}
+
+<div class="c-profile-teaser">
+  <figure class="c-profile-teaser__thumbnail">
+    <img src="/assets/images/{{ thumbnail }}" alt="{{ name }}" class="c-profile-teaser__image">
+  </figure>
+  <div class="c-profile-teaser__body">
+    <h3 class="c-profile-teaser__name">{{ name }}</h3>
+
+    <p>{{ bio }}</p>
+  </div>
+</div>

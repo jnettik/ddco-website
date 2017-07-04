@@ -1,0 +1,57 @@
+.c-article-pager {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 3rem 0 0;
+
+  &__item {
+    flex: 1;
+  }
+
+  &__link {
+    color: $orange;
+    display: block;
+    font-family: $ff-heading;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      display: block;
+      line-height: 0;
+      position: absolute;
+      transition: all .15s;
+      top: 40%;
+    }
+
+    &-prev {
+      padding-left: .75em;
+
+      &:after {
+        content: "«";
+        left: 0;
+      }
+
+      &:hover:after {
+        left: -0.25em;
+      }
+    }
+
+    &-next {
+      text-align: right;
+      padding-right: .75em;
+
+      &:after {
+        content: "»";
+        right: 0;
+      }
+
+      &:hover:after {
+        right: -0.25em;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -25,7 +25,7 @@ config.ignore = [
 config.collections = {
   articles: {
     pattern: 'articles/*.md',
-    sortby: 'post_date',
+    sortBy: 'post_date',
     metadata: {
       view: 'article.twig'
     }

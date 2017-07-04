@@ -1,0 +1,39 @@
+.c-profile-teaser {
+  background-color: #f7f7f7;
+  max-width: 100%;
+  padding: 1rem;
+
+  &__thumbnail {
+    margin: 0 0 1rem;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__name {
+    color: $teal;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(500px) {
+    display: flex;
+
+    &__thumbnail {
+      margin: 0 1rem 0 0;
+      width: rem(150px);
+    }
+
+    &__body {
+      flex: 1;
+    }
+  }
+}
