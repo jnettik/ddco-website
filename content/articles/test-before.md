@@ -3,6 +3,7 @@ title: Test before
 author: jennettik
 post_date: 2017-05-11
 category: Real Wedding
+main_image: cake-cutting.png
 credits:
   - label: Photography
     name: Our Two Hearts

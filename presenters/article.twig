@@ -39,9 +39,28 @@
             </div>
 
             <aside class="side-col">
-              {% for article in related %}
-                {{ article.title }}
-              {% endfor %}
+              {% if related %}
+                <div class="block block--related">
+                  <h2 class="block__title">{{ "You might also like:" }}</h2>
+
+                  <ul class="block__content teaser-list">
+                    {% for article in related %}
+                    <li class="teaser-list__item">
+                      <article class="card card--article">
+                        <figure class="card__thumbnail">
+                          <img src="/assets/images/thumbnails/{{ article.main_image }}" alt="{{ article.title }}">
+                        </figure>
+
+                        <div class="card__content">
+                          <h3 class="card__title">{{ article.title }}</h3>
+                          <p class="card__metadata">{{ article.category }}</p>
+                        </div>
+                      </article>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
             </aside>
           </div>
         </article>
