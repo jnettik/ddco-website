@@ -3,6 +3,7 @@ title: Test After
 author: jennettik
 post_date: 2017-05-13
 category: Real Wedding
+service: weddings
 main_image: cake-cutting.png
 credits:
   - label: Photography

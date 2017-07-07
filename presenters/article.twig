@@ -46,7 +46,7 @@
                   <ul class="block__content teaser-list">
                     {% for article in related %}
                     <li class="teaser-list__item">
-                      <article class="card card--article">
+                      <a href="/{{ article.path }}" class="card card--article">
                         <figure class="card__thumbnail">
                           <img src="/assets/images/thumbnails/{{ article.main_image }}" alt="{{ article.title }}">
                         </figure>
@@ -55,7 +55,7 @@
                           <h3 class="card__title">{{ article.title }}</h3>
                           <p class="card__metadata">{{ article.category }}</p>
                         </div>
-                      </article>
+                      </a>
                     </li>
                     {% endfor %}
                   </ul>

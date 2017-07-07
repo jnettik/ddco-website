@@ -29,6 +29,19 @@
       text: "Our Favs"
     } only %}
 
+    {% if studies is not empty %}
+      <ul class="case-studies">
+        {% for study in studies %}
+          <li class="case-studies__study">
+            <a href="/{{ study.url }}" class="case-studies__study-link">
+              <img src="/assets/images/square/{{ study.main_image }}" alt="{{ study.title }}" class="case-studies__study-image">
+              <p class="case-studies__study-title">{{ study.title }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
     {% include '../styleguide/patterns/01-components/c-section-title/c-section-title.twig' with {
       text: "How It Works"
     } only %}

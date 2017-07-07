@@ -3,6 +3,7 @@ title: Smitten Kitten Garden Party Wedding
 author: jennettik
 post_date: 2017-05-12
 category: Real Wedding
+service: weddings
 main_image: cake-cutting.png
 credits:
   - label: Photography
@@ -12,7 +13,7 @@ credits:
     name: Lyons Farmette/Riverbend
     url: http://www.google.com
   - label: Day of Coordinator
-    name: Memory Make
+    name: Memory Maker
     url: http://www.google.com
   - label: Wedding Dress
     name: Allure Bridal

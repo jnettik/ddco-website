@@ -16,6 +16,7 @@ const permalinks = require('metalsmith-permalinks');
 const collections = require('metalsmith-collections');
 const twig = require('metalsmith-twig');
 const related = require('../lib/relatedTag');
+const caseStudies = require('../lib/serviceCaseStudies');
 
 gulp.task('html', ['clean:html'], () => {
   Metalsmith(__dirname)
@@ -26,6 +27,7 @@ gulp.task('html', ['clean:html'], () => {
     .use(metadata(config.metadata.extra))
     .use(collections(config.collections))
     .use(related())
+    .use(caseStudies())
     .use(markdown())
     .use(permalinks(config.permalinks))
     .use(twig(config.twig))
