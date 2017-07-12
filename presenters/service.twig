@@ -1,9 +1,94 @@
 {% embed './default.twig' %}
   {% block content %}
     {# Place the page header. #}
-    {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'right' } %}
+    {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'center' } %}
       {% block content %}
+        {% include '../styleguide/patterns/01-components/c-title-ribbon/c-title-ribbon.twig' with { text_upper: 'Let&rsquo;s have', text_lower: 'fun together' } %}
+      {% endblock %}
+    {% endembed %}
 
+        {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="/assets/images/weddings.jpg" alt="Weddings">'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Bold Design for the Modern Bride",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: '/services/weddings/'
+          }
+        } %}
+      {% endblock %}
+    {% endembed %}
+
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' with { flow: 'reverse' } %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="/assets/images/parties.jpg" alt="Parties">'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Creativity for inspired events",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: '/servies/parties/'
+          },
+          flow: 'reverse'
+        } %}
+      {% endblock %}
+    {% endembed %}
+
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
+      {% block thumb %}
+        {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
+          media: '<img src="/assets/images/branding.jpg" alt="Branding">'
+        } %}
+      {% endblock %}
+
+      {% block content %}
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Stylish Branding for Beautiful Businesses",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: '/servies/branding/'
+          }
+        } %}
       {% endblock %}
     {% endembed %}
 
