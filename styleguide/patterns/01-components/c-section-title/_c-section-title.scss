@@ -6,4 +6,9 @@
   padding: .75em 0;
   text-align: center;
   text-transform: uppercase;
+
+  &--large {
+    color: $pink;
+    font-size: rem(50px);
+  }
 }

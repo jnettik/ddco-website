@@ -8,6 +8,6 @@ main_menu:
       url: "/"
       logo: true
     - content: "Shop"
-      url: "#"
+      url: "https://www.etsy.com/shop/DearlyDesignCompany"
     - content: "Contact"
       url: "#"
