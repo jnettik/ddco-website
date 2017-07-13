@@ -5,7 +5,7 @@ $bg-color: $navy;
   background-image: url('../images/billboard-bg.jpg');
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
 
   &__content {
@@ -16,6 +16,8 @@ $bg-color: $navy;
   }
 
   @include breakpoint(750px) {
+    height: 100vh;
+
     &--start,
     &--end {
       .c-billboard__item {

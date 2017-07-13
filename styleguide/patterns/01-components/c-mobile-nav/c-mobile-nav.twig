@@ -1,0 +1,29 @@
+<nav class="c-mobile-nav">
+  <ul class="c-mobile-nav__links">
+    {% for link in links if not link.logo %}
+    <li class="c-mobile-nav__item">
+      {% set link_classes = ['c-mobile-nav__link'] %}
+
+      {% if current_path|slice(0, link.url|length) == link.url %}
+        {% set link_classes = link_classes|merge('c-mobile-nav__active-trail') %}
+      {% endif %}
+
+      {% if current_path|slice(0, link.url|length) == link.url %}
+        {% set link_classes = link_classes|merge('c-mobile-nav__active') %}
+      {% endif %}
+
+      <a href="{{ link.url }}" class="{{ link_classes|join(' ') }}">{{ link.content|raw }}</a>
+
+      {% if link.children %}
+      <ul class="c-mobile-nav__dropdown">
+        {% for link in link.children %}
+        <li class="c-mobile-nav__item">
+          <a href="{{ link.url }}" class="c-mobile-nav__link">{{ link.content|raw }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -193,3 +193,37 @@
     }
   }
 }
+
+[data-context="large"] {
+  @include breakpoint(max-width 779px) {
+    display: none;
+  }
+}
+
+[data-context="small"] {
+  @include breakpoint(780px) {
+    display: none;
+  }
+}
+
+.logo-wrapper {
+  position: relative;
+}
+
+.site-logo {
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: rem($g-gutter-half);
+  transform: translateX(-50%);
+}
+
+.site-logo__link,
+.site-logo__logo {
+  display: block;
+}
+
+.site-logo__logo {
+  height: auto;
+  width: 150px;
+}

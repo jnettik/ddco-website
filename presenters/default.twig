@@ -19,7 +19,17 @@
   </head>
 
   <body>
-    <div class="l-constrained c-main-nav__wrapper">
+    <div class="l-constrained logo-wrapper" data-context="small">
+      <h1 class="site-logo">
+        <a href="/" class="site-logo__link">
+          <img src="/assets/images/logo.svg" alt="Dearly Design Co." class="site-logo__logo">
+        </a>
+      </h1>
+
+      <a href="#mobile-menu" class="c-mobile-menu__toggle" aria-label="Expand Menu">☰</a>
+    </div>
+
+    <div class="l-constrained c-main-nav__wrapper" data-context="large">
       {% include '../styleguide/patterns/01-components/c-main-nav/c-main-nav.twig' with {
         links: metadata.menus.main_menu.links,
         current_path: path
@@ -30,7 +40,27 @@
       {{ contents }}
     {% endblock %}
 
+    <div id="mobile-menu" class="l-constrained c-mobile-nav__wrapper" data-context="small">
+      {% include '../styleguide/patterns/01-components/c-mobile-nav/c-mobile-nav.twig' with {
+        links: metadata.menus.main_menu.links,
+        current_path: path
+      } only %}
+    </div>
+
     {% block js_body %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      (function($) {
+        var $mobileMenuToggle = $('.c-mobile-menu__toggle');
+        var $mobileMenu = $('.c-mobile-nav__wrapper');
+
+        $mobileMenu.addClass('toggle-enabled');
+        $mobileMenuToggle.on('click', function(e) {
+          e.preventDefault();
+          $mobileMenu.toggleClass('is-active');
+        });
+      }(jQuery));
+    </script>
     {% endblock %}
   </body>
 </html>
