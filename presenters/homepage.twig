@@ -132,7 +132,7 @@
     } %}
 
     {% if metadata.collections.articles %}
-      <section class="l-constrained">
+      <section class="l-constrained" style="overflow: hidden;">
         <h2 class="c-section-title c-section-title--large">{{ "On the Blog" }}</h2>
         <ul class="teaser-grid">
           {% for article in metadata.collections.articles|slice(0, 3) %}
