@@ -59,6 +59,14 @@
           e.preventDefault();
           $mobileMenu.toggleClass('is-active');
         });
+
+        $('.c-main-nav__parent > .c-main-nav__link').on('click', function(e) {
+          e.preventDefault();
+          $(this)
+            .toggleClass('is-active')
+            .next('.c-main-nav__dropdown')
+              .toggleClass('is-visible');
+        });
       }(jQuery));
     </script>
     {% endblock %}

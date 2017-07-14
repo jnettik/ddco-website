@@ -4,6 +4,13 @@ main_menu:
       url: "/about"
     - content: "Services"
       url: "/services"
+      children:
+        - content: "Weddings"
+          url: "/services/weddings"
+        - content: "Branding"
+          url: "/services/branding"
+        - content: "Parties"
+          url: "/services/parties"
     - content: "<img src=\"/assets/images/logo.svg\" alt=\"Dearly Design Co.\">"
       url: "/"
       logo: true

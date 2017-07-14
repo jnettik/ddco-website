@@ -71,7 +71,7 @@
       width: 0;
     }
 
-    &:hover {
+    &:not(.is-active):hover {
       &:after {
         left: 0;
         width: 100%;
@@ -100,5 +100,55 @@
       transform: translateY(rem(-10px));
       width: rem(200px);
     }
+  }
+}
+
+.c-main-nav__parent {
+  position: relative;
+}
+
+.c-main-nav__dropdown {
+  background-color: #fff;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: none;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  padding: rem(10px);
+  pointer-events: none;
+  position: absolute;
+  top: 120%;
+  transition:
+    top .15s,
+    opacity .15s;
+  width: 100%;
+  z-index: 1;
+
+  .c-main-nav__link {
+    color: $clr-text;
+    font-size: rem(16px);
+    padding: 0;
+  }
+
+  &:after {
+    border: rem(10px) solid transparent;
+    border-bottom-color: #fff;
+    content: "";
+    display: block;
+    height: 0;
+    left: 50%;
+    margin-left: rem(-10px);
+    position: absolute;
+    top: rem(-20px);
+    width: 0;
+  }
+
+  &.is-visible {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    top: 100%;
   }
 }
