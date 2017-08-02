@@ -37,6 +37,24 @@
       {% endblock %}
     {% endembed %}
 
+    <section class="c-cta--home">
+      <div class="l-constrained">
+        <p class="pre-title">We love to make new friends.</p>
+        <h1 class="title">And you are here because...</h1>
+        <ul class="bubble-links">
+          <li class="bubble-links__item"><a href="/services/weddings/">
+            <span class="bubble__links-pre">You're getting</span> married
+          </a></li>
+          <li class="bubble-links__item"><a href="/services/branding/">
+            <span class="bubble__links-pre">You're planning a</span> party
+          </a></li>
+          <li class="bubble-links__item"><a href="/services/parties/">
+            <span class="bubble__links-pre">You have a</span> business
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
     {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' %}
       {% block thumb %}
         {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {

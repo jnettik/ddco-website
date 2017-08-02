@@ -47,5 +47,11 @@
     "postcss-cssnext": "^2.9.0",
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "sass-lint": "^1.10.2"
   }
 }
