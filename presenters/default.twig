@@ -40,6 +40,12 @@
       {{ contents }}
     {% endblock %}
 
+    <footer class="site-footer">
+      <div class="l-constrained">
+        <p class="copyright">&copy; Dearly Design Co.</p>
+      </div>
+    </footer>
+
     <div id="mobile-menu" class="l-constrained c-mobile-nav__wrapper" data-context="small">
       {% include '../styleguide/patterns/01-components/c-mobile-nav/c-mobile-nav.twig' with {
         links: metadata.menus.main_menu.links,

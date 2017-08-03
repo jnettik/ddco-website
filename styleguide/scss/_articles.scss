@@ -283,3 +283,15 @@
     }
   }
 }
+
+.site-footer {
+  background-color: $navy;
+  padding: 2rem;
+
+  .copyright {
+    color: #fff;
+    font-family: $ff-heading;
+    font-size: rem(14px);
+    margin: 0;
+  }
+}
