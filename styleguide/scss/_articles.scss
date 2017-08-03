@@ -288,10 +288,64 @@
   background-color: $navy;
   padding: 2rem;
 
+  > .l-constrained {
+    @include breakpoint(600px) {
+      align-items: center;
+      display: flex;
+    }
+  }
+
   .copyright {
     color: #fff;
     font-family: $ff-heading;
     font-size: rem(14px);
     margin: 0;
+
+    @include breakpoint(max-width 599px) {
+      text-align: center;
+    }
   }
+
+  .copyright,
+  .c-social-menu {
+    flex: 1;
+  }
+}
+
+.c-social-menu__items {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint(600px) {
+    justify-content: flex-end;
+  }
+}
+
+.c-social-menu__link {
+  display: block;
+  padding: .555555556rem;
+  transition: transform .25s;
+}
+
+.c-social-menu__link:hover {
+  transform: scale(1.25);
+}
+
+.c-social-menu__link > svg {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
+
+.c-social-menu__link > svg use {
+  fill: #fff;
+}
+
+.c-social-menu__link[href*="etsy.com/"] > svg {
+  transform: translateY(.277777778rem);
+  width: 4rem;
 }
