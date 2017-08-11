@@ -1,9 +1,27 @@
 {% embed './default.twig' %}
   {% block content %}
     {# Place the page header. #}
-    {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'right' } %}
+    {% embed '../styleguide/patterns/01-components/c-billboard/c-billboard.twig' with { alignment: 'end' } %}
       {% block content %}
-
+        {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
+          title: "Stylish Branding for Beautiful Businesses",
+          items: [
+            'Save the dates',
+            'Invitation suites',
+            'Programs &amp; Menus',
+            'Day of paper goods',
+            'Favors &amp Gifts',
+            'Thank you cards',
+            'RSVP websites',
+            'Professional printing'
+          ],
+          button: {
+            content: 'See More',
+            href: '/services/branding/'
+          },
+          variant: 'light',
+          classes: ['c-billboard__item']
+        } %}
       {% endblock %}
     {% endembed %}
 
