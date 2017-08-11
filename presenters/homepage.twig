@@ -83,7 +83,7 @@
       {% endblock %}
     {% endembed %}
 
-    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' with { flow: 'reverse' } %}
+    {% embed '../styleguide/patterns/02-layouts/l-teaser/l-teaser.twig' with { flow: 'reverse', color: 'light' } %}
       {% block thumb %}
         {% include '../styleguide/patterns/01-components/c-figure-fancy/c-figure-fancy.twig' with {
           media: '<img src="/assets/images/parties.jpg" alt="Parties">'
@@ -92,7 +92,7 @@
 
       {% block content %}
         {% include '../styleguide/patterns/01-components/c-action-list/c-action-list.twig' with {
-          title: "Creativity for inspired events",
+          title: "Creativity for<br>inspired events",
           items: [
             'Save the dates',
             'Invitation suites',
@@ -141,7 +141,7 @@
     {% endembed %}
 
     {% include '../styleguide/patterns/01-components/c-cta-banner/c-cta-banner.twig' with {
-        title: "Showers, Soirées, and Celebrations...",
+        title: "Showers, Soirées, and<br>Celebrations...",
         subtitle: "we've got you",
         button: {
           href: "http://www.google.com",

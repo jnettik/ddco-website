@@ -2,6 +2,10 @@
   background-image: url('/assets/images/cta-bg.jpg');
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: rem(280px);
   padding: 3.5rem 1rem;
   text-align: center;
 
@@ -19,7 +23,7 @@
   &__subtitle {
     color: $pink;
     font-family: $ff-script;
-    font-size: rem(80px);
+    font-size: rem(120px);
     line-height: 1;
     margin-bottom: em(-16px, 80px);
     padding-top: em(18px, 80px);
