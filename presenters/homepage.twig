@@ -149,28 +149,6 @@
         }
     } %}
 
-    {% if metadata.collections.articles %}
-      <section class="l-constrained" style="overflow: hidden;">
-        <h2 class="c-section-title c-section-title--large">{{ "On the Blog" }}</h2>
-        <ul class="teaser-grid">
-          {% for article in metadata.collections.articles|slice(0, 3) %}
-          <li class="teaser-grid__item">
-            <a href="/{{ article.path }}" class="card card--article">
-              <figure class="card__thumbnail">
-                <img src="/assets/images/thumbnails/{{ article.main_image }}" alt="{{ article.title }}">
-              </figure>
-
-              <div class="card__content">
-                <h3 class="card__title">{{ article.title }}</h3>
-                <p class="card__metadata">{{ article.category }}</p>
-              </div>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
-
     {% include '../styleguide/patterns/01-components/c-slogan/c-slogan.twig' with {
         text: "Love is all you need. Love, and a really great cocktail.",
     } %}
